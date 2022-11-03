@@ -1,4 +1,22 @@
 spring:
-  redis:
-    port: 6379
-    host: localhost
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/backend
+    username: admin
+    password:
+    driver-class-name: org.h2.Driver
+    hikari:
+      maximum-pool-size: 40
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+#        type:
+#          descriptor:
+#            sql:
+#              BasicBinder: TRACE
